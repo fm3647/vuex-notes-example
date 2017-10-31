@@ -1,13 +1,28 @@
 <template lang="html">
   <div class="ui form">
     <div class="field">
-      <textarea></textarea>
+      <textarea
+      rows="5"
+      placeholder="글을 입력하세요..."
+      v-model="entity.body"
+      v-on:input="update(entity)">
+      </textarea>
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
+  methods: {
+    ...mapActions([
+      'update'
+    ])
+  },
+  props: [
+    'entity'
+  ]
 }
 </script>
 

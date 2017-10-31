@@ -21,7 +21,7 @@
 }
 
 .notes .ui textarea {
-  /*border: none;*/
+  border: none;
   font-size: 16px;
   padding: 0;
   margin: 32px 0;
